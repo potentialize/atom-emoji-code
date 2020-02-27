@@ -73,6 +73,21 @@ Let's say, you want to insert the 😄 emoji
 
 Keep in mind that Atom supports fuzzy completion, inviting you to use abbreviation of your preference.
 
+## Contribute
+### Setup
+1. Fork this repo
+1. Clone the fork on your development machine
+1. Install dependencies: `npm install`
+1. Link package to atom (so you can test changes): `apm link <repo root> --name dev-emoji-code`
+1. Disable the official version of `emoji-code` to prevent conflicts
+
+### Workflow
+1. `src/build.js` generates the snippets and saves them in `snippets`
+1. Run `guard` to build on file changes (or run `npm run build` manually after each change)
+   - Note: `guard` needs to be installed: `gem install guard guard-shell`
+     (this requires Ruby)
+1. Refresh Atom to test changes: `Ctrl+Shift+P` and select `Window: Reload`
+
 ## License
 
 This work is licensed under the [The MIT License](LICENSE.md).
